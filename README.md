@@ -9,10 +9,14 @@ This project based on three categories:
 1. Task Administration
 2. Inter-Process Communication
 3. Timing Functions
+
+
 We used linked lists to create
 1. Ready List: carries tasks that are ready for execution
 2. Waiting List: carries tasks blocked from execution and waiting for some resources
 3. Timer List: carries tasks sleeping for a specific duration.
+
+
 We also used linked lists for mailboxes, which is related to Inter-Process Communication.
 Every other thing that needed to create an RTMK given to us. Assembly codes, list structures,
 testing files, etc.
