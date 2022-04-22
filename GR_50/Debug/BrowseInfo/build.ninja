@@ -1,0 +1,90 @@
+##IAR Ninja build file
+
+
+#Rules
+rule COMPILER_XCL
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\XclFileGenerator.exe $xclcommand -f "$rspfile_name"
+  description = IAR_NEW_TOOL+++COMPILER_XCL+++$in+++C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\XclFileGenerator.exe $flags
+  rspfile = $rspfile_name
+  rspfile_content = $flags
+
+rule INDEXER
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\SourceIndexer.exe $flags
+  depfile = $out.dep
+  description = IAR_NEW_TOOL+++INDEXER+++$out+++C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\SourceIndexer.exe $flags
+
+rule MAKEBROWSE
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\makeBrowseData.exe $flags
+  description = IAR_NEW_TOOL+++MAKEBROWSE+++$out+++C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\makeBrowseData.exe $flags
+
+rule PDBLINK
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\PbdLink.exe $flags
+  description = IAR_NEW_TOOL+++PDBLINK+++$out+++C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\PbdLink.exe $flags
+
+
+
+#Build steps
+build C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\exceptions.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\student\Desktop\GR_50\exceptions.c -xcl_file C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\exceptions.xcl -macro_file C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\exceptions.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Users\student\Desktop\GR_50\exceptions.c -o C$:\Users\student\Desktop\GR_50\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -Ol --predef_macros C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\exceptions.tmp
+  rspfile_name = C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\exceptions.xcl.rsp
+
+build C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\kernel_functions.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\student\Desktop\GR_50\kernel_functions.c -xcl_file C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\kernel_functions.xcl -macro_file C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\kernel_functions.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Users\student\Desktop\GR_50\kernel_functions.c -o C$:\Users\student\Desktop\GR_50\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -Ol --predef_macros C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\kernel_functions.tmp
+  rspfile_name = C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\kernel_functions.xcl.rsp
+
+build C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\main.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\student\Desktop\GR_50\main.c -xcl_file C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\main.xcl -macro_file C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\main.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Users\student\Desktop\GR_50\main.c -o C$:\Users\student\Desktop\GR_50\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -Ol --predef_macros C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\main.tmp
+  rspfile_name = C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\main.xcl.rsp
+
+build C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\startup_sam3x.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\student\Desktop\GR_50\startup_sam3x.c -xcl_file C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\startup_sam3x.xcl -macro_file C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\startup_sam3x.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Users\student\Desktop\GR_50\startup_sam3x.c -o C$:\Users\student\Desktop\GR_50\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -Ol --predef_macros C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\startup_sam3x.tmp
+  rspfile_name = C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\startup_sam3x.xcl.rsp
+
+build C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\system_sam3x.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\student\Desktop\GR_50\system_sam3x.c -xcl_file C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\system_sam3x.xcl -macro_file C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\system_sam3x.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Users\student\Desktop\GR_50\system_sam3x.c -o C$:\Users\student\Desktop\GR_50\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -Ol --predef_macros C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\system_sam3x.tmp
+  rspfile_name = C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\system_sam3x.xcl.rsp
+
+build C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\exceptions.pbi : INDEXER C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\exceptions.xcl |  $
+C$:\Users\student\Desktop\GR_50\exceptions.c
+  flags = -out=C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\exceptions.pbi -f C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\exceptions.xcl
+
+build C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\kernel_functions.pbi : INDEXER C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\kernel_functions.xcl |  $
+C$:\Users\student\Desktop\GR_50\kernel_functions.c
+  flags = -out=C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\kernel_functions.pbi -f C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\kernel_functions.xcl
+
+build C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\main.pbi : INDEXER C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\main.xcl |  $
+C$:\Users\student\Desktop\GR_50\main.c
+  flags = -out=C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\main.pbi -f C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\main.xcl
+
+build C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\startup_sam3x.pbi : INDEXER C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\startup_sam3x.xcl |  $
+C$:\Users\student\Desktop\GR_50\startup_sam3x.c
+  flags = -out=C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\startup_sam3x.pbi -f C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\startup_sam3x.xcl
+
+build C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\system_sam3x.pbi : INDEXER C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\system_sam3x.xcl |  $
+C$:\Users\student\Desktop\GR_50\system_sam3x.c
+  flags = -out=C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\system_sam3x.pbi -f C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\system_sam3x.xcl
+
+build C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\gr_50.pbw : MAKEBROWSE C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\gr_50.pbd
+  flags = C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\gr_50.pbd -output C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\gr_50.pbw
+
+build C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\gr_50_part0.pbi : PDBLINK C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\exceptions.pbi |  $
+C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\kernel_functions.pbi
+  flags = -M C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\gr_50_part0.pbi C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\exceptions.pbi C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\kernel_functions.pbi
+
+build C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\gr_50_part1.pbi : PDBLINK C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\main.pbi |  $
+C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\startup_sam3x.pbi
+  flags = -M C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\gr_50_part1.pbi C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\main.pbi C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\startup_sam3x.pbi
+
+build C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\gr_50_part2.pbi : PDBLINK C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\system_sam3x.pbi
+  flags = -M C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\gr_50_part2.pbi C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\system_sam3x.pbi
+
+build C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\gr_50.pbd : PDBLINK C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\gr_50_part0.pbi |  $
+C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\gr_50_part1.pbi $
+C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\gr_50_part2.pbi
+  flags = -M C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\gr_50.pbd C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\gr_50_part0.pbi C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\gr_50_part1.pbi C$:\Users\student\Desktop\GR_50\Debug\BrowseInfo\gr_50_part2.pbi
+

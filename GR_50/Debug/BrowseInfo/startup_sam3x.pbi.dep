@@ -1,0 +1,15 @@
+C:\Users\student\Desktop\GR_50\Debug\BrowseInfo\startup_sam3x.pbi: \
+  C:\Users\student\Desktop\GR_50\startup_sam3x.c \
+  C:\Users\student\Desktop\GR_50/at91sam3x8.h \
+  C:\Users\student\Desktop\GR_50/exceptions.h \
+  C:\Users\student\Desktop\GR_50/core_cm3.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\stdint.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\ycheck.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\yvals.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Defaults.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Config_Normal.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Product.h \
+  C:\Users\student\Desktop\GR_50/core_cmInstr.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\aarch32\cmsis_iar.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\aarch32/iccarm_builtin.h \
+  C:\Users\student\Desktop\GR_50/core_cmFunc.h
